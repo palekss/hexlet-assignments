@@ -1,6 +1,8 @@
 package exercise;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
@@ -10,16 +12,22 @@ class AppTest {
     @Test
     void testTake() {
         // BEGIN
-        List<Integer> expected = new ArrayList<>();
-        expected.add(1);
-        expected.add(2);
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        List<Integer> result = App.take(list, 2);
-        assertThat(result).isEqualTo(expected);
+        List<Integer> expected1 = new ArrayList<>(Arrays.asList(1, 2));
+        List<Integer> list1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        List<Integer> result1 = App.take(list1, 2);
+        assertThat(result1).isEqualTo(expected1);
+
+        List<Integer> expected2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        List<Integer> list2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        List<Integer> result2 = App.take(list2, 7);
+        assertThat(result2).isEqualTo(expected2);
+
+        List<Integer> expected3 = new ArrayList<>();
+        List<Integer> list3 = new ArrayList<>();
+        List<Integer> result3 = App.take(list3, 2);
+        assertThat(result3).isEqualTo(expected3);
+
+        
         // END
     }
 }
