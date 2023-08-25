@@ -61,19 +61,19 @@ class AppTest {
     void testReversedSequence1() {
         CharSequence text = new ReversedSequence("Hello Hexlet!");
         String expected1 = "!telxeH olleH";
-        char expected2 = 'e';
+        char expected2 = 't';
         int expected3 = 13;
-        //String expected4 = "lle";
+        String expected4 = "tel";
 
         String result1 = text.toString();
-        char result2 = text.charAt(1); // 'e'
-        int result3 = text.length(); // 6
-        //String result4 = text.subSequence(1, 4).toString();
+        char result2 = text.charAt(1);
+        int result3 = text.length();
+        String result4 = text.subSequence(1, 4).toString();
 
         assertThat(result1).isEqualTo(expected1);
         assertThat(result2).isEqualTo(expected2);
         assertThat(result3).isEqualTo(expected3);
-        //assertThat(result4).isEqualTo(expected4);
+        assertThat(result4).isEqualTo(expected4);
     }
     // END
 }

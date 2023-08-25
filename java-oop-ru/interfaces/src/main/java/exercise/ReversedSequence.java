@@ -5,7 +5,11 @@ public class ReversedSequence implements CharSequence {
     private String string;
 
     public ReversedSequence(String string) {
-        this.string = string;
+        String revString = "";
+        for(var i = string.length() - 1; i >= 0; i--) {
+            revString = revString + string.charAt(i);
+        }
+        this.string = revString;
     }
 
     @Override
@@ -25,12 +29,7 @@ public class ReversedSequence implements CharSequence {
 
     @Override
     public String toString() {
-        String revString = "";
-//        CharSequence charString = null;
-        for(var i = string.length() - 1; i >= 0; i--) {
-            revString = revString + string.charAt(i);
-        }
-        return revString;
+        return string;
     }
 }
 // END
