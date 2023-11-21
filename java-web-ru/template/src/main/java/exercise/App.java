@@ -33,8 +33,11 @@ public final class App {
                 throw new NotFoundResponse("User not found");
             }
 
-            int userNumberId = 0;
-            for (var i = 0; i > USERS.size(); i++) {
+
+
+            var userNumberId = 0;
+
+            for (var i = 0; i < USERS.size(); i++) {
                 if (userNumber == USERS.get(i).getId()) {
                     userNumberId = i;
                 }
