@@ -1,9 +1,9 @@
+@import exercise.dto.users.UsersPage
+@import exercise.model.User
+@param UsersPage page
+
 @template.layout.page(
     content = @`
         <a href="/users">Пользователи</a>
-        <form action="/users" method="get">
-            <input type="search" name="term" />
-            <input type="submit" value="Search" />
-        </form>
     `
 )

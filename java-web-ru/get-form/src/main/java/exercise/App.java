@@ -26,9 +26,7 @@ public final class App {
             if (term == null) {
                 findUsers = USERS;
             } else {
-                findUsers = USERS
-                        .stream()
-                        //.filter(x -> x.getFirstName().toLowerCase().startsWith(term.toLowerCase()))
+                findUsers = USERS.stream()
                         .filter(x -> StringUtils.startsWithIgnoreCase(x.getFirstName(), term))
                         .toList();
             }
