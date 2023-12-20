@@ -54,14 +54,9 @@ public final class App {
 
             } catch (ValidationException e) {
                 var page = new BuildArticlePage(title, content, e.getErrors());
-                ctx.render("articles/build.jte", Collections.singletonMap("page", page));
+                ctx.render("articles/build.jte", Collections.singletonMap("page", page)).status(422);
             }
-
         });
-
-       /* app.get("/articles/build", ctx -> {
-            ctx.render("articles/build.jte");
-        });*/
 
         // END
 

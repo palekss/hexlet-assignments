@@ -24,7 +24,7 @@
             <div>
                 <label>
                     Текст
-                    <input type="text" name="content" value="${page.getContent()}" />
+                    <input type="text" required name="content" value="${page.getContent()}" />
                 </label>
             </div>
 
